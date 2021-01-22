@@ -8,11 +8,12 @@ function App() {
   const apareceGIF = () => {
     adicionarGIF(!mostrarGIF);
   };
+
   return (
     <div className="App">
       <button onClick={apareceGIF}>Clique aqui</button>
 
-      {mostrarGIF && <MostraGIF />}
+      {mostrarGIF && <MostraGIF desaparecer={apareceGIF} />}
     </div>
   );
 }
