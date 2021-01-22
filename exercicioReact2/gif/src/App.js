@@ -6,14 +6,16 @@ function App() {
   const [mostrarGIF, adicionarGIF] = useState(false);
 
   const apareceGIF = () => {
-    adicionarGIF(!mostrarGIF);
+    adicionarGIF(true);
   };
-
+  const desapareceGIF = () => {
+    adicionarGIF(false);
+  }
   return (
     <div className="App">
       <button onClick={apareceGIF}>Clique aqui</button>
 
-      {mostrarGIF && <MostraGIF desaparecer={apareceGIF} />}
+      {mostrarGIF && <MostraGIF desaparecer = {desapareceGIF} />}
     </div>
   );
 }
