@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Tinos:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  background-color: #f9f9f9;
+  color: #2b2c31;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 231px 153px;
+  grid-template-areas: 
+    'sidebar content content'
+    'perfil-sidebar perfil perfil'
+    'contact-sidebar experience experience'
+    'education-sidebar experience experience'
+}
+
+button {
+  background: #d7b22a;
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.2s ease;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b7961f;
+}
+
+aside {
+  background-color: #2b2b30;
+}
+
+h3 {
+  position: relative;
+  color: #d7b22a;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+h3::after {
+  position: absolute;
+  content: '';
+  padding: 3px 16px;
+  background: #d7b22a;
+  bottom: -4px;
+  right: 0px;
+}
+
+.experience {
+  margin: 50px;
+
+}
+  .experience h2 {
+    position: relative;
+    color: #2b2b30;
+    font-size: 19px;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+  }
+   .experience h2::after {
+      position: absolute;
+      content: "";
+      padding: 3px 65px;
+      background: #2b2b30;
+      bottom: -4px;
+      left: 0px;
+    }
+
+.experience-item {
+  display: flex;
+}
+.experience-item  div {
+    flex-basis: 40%;
+    border-right: 2px solid #2b2b30;
+  }
+
+.experience-item  p {
+  border-bottom: 2px solid #2b2b30;
+  flex-basis: 80%;
+  padding: 20px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.experience-item  h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.experience-item  date,
+.experience-item span {
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.experience-item span {
+  border-bottom: 2px solid #2b2b30;
+}
+
+.experience-item strong {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.sidebar {
+  text-align: right;
+  padding: 50px 40px 20px;
+  color: #fff;
+}
+.sidebar  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+.sidebar  p,
+.sidebar  a {
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+}
+
+.lista-de-contatos {
+  list-style: none;
+  line-height: 30px;
+}
+
+.item-contato {
+  padding-right: 15px;
+}
+.item-contato  h4 {
+  height: 20px;
+  font-size: 14px;
+}
+
+.lista-de-formacao li {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 15px 0;
+}
+
+.lista-de-formacao li:first-child {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.lista-de-formacao  h4 {
+  margin-bottom: 5px;
+}
+
+.perfil {
+  grid-area: sidebar;
+}
+
+.perfil img {
+    max-width: 100%;
+}
+
+.biografia {
+  grid-area: content;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.biografia  h1 {
+  font-size: 60px;
+  color: #535458;
+  font-family: "Tinos", serif;
+  text-transform: uppercase;
+}
+
+.biografia p {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.ocupacao {
+  color: #d7b22a;
+  background-color: #2b2b30;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding: 10px 0 10px 15px;
+}
+
+.titulo {
+  grid-area: perfil-sidebar;
+  color: #fff;
+  text-align: right;
+  background-color: rgba(153, 123, 11, 0.36);
+  padding: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.titulo::before {
+  content: "";
+  padding: 8px 20px;
+  position: absolute;
+  background: #fff;
+  bottom: 53.5%;
+  left: 35%;
+}
+
+.perfil-profissional {
+  grid-area: perfil;
+  background-color: #d7b22a;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+}
+.perfil-profissional  p {
+  color: #fff;
+  line-height: 25px;
+}

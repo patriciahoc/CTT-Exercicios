@@ -5,7 +5,7 @@ interface Developer {
   famoso: boolean;
 }
 
-function programador(dev,produtos) {
+function programador(dev: Developer,produtos:string[]) {
   // não precisa desenvolver nada aqui
 }
 const dev: Developer = {
