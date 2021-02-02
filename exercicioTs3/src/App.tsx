@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Informacao from "./componentes/Informacoes";
 import { Info } from "./types/informacao";
 
 function App() {
-  const [CEP, setCEP] = useState("");
+  const [CEP, setCEP] = useState<String>("");
   const [info, setInfo] = useState<Info>();
 
   function getBuscar() {
