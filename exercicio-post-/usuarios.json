@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "name": "Nicole Freire",
+      "age": 22,
+      "company": "Ambev",
+      "phone": "19 99761-8328",
+      "id": 1
+    },
+    {
+      "name": "Joana Dark",
+      "ahe": 51,
+      "phone": "11 93321-8328",
+      "company": "Tesla",
+      "id": 2
+    },
+    {
+      "name": "",
+      "age": "",
+      "company": "",
+      "phone": "",
+      "id": 3
+    }
+  ]
+}
