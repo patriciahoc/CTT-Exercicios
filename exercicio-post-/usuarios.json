@@ -20,6 +20,13 @@
       "company": "",
       "phone": "",
       "id": 3
+    },
+    {
+      "name": "Rafael Henrique",
+      "age": "28",
+      "company": "CI&T",
+      "phone": "19 99999999",
+      "id": 4
     }
   ]
 }
