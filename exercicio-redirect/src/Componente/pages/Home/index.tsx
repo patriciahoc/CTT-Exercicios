@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Redirect } from "react-router-dom";
 
@@ -9,16 +9,17 @@ const Home = () => {
 
   const [userlogado, setUserLogado] = useState<Boolean>(false);
 
-
   const [nome] = useState<String>("admin");
   const [senha] = useState<String>("admin");
 
   const getForm = () => {
-   
-    if (inputNome.current?.value === nome && inputSenha.current?.value === senha) {
+    if (
+      inputNome.current?.value === nome &&
+      inputSenha.current?.value === senha
+    ) {
       setUserLogado(true);
     } else {
-      setUserLogado(false);
+      alert("Dados incorretos")
     }
   };
 
@@ -27,10 +28,10 @@ const Home = () => {
       <Helmet>
         <title>Home</title>
       </Helmet>
+      {userlogado  &&   <Redirect to="/login" />}
       <div className="form">
-        {userlogado ? (
-          <Redirect to="/login" />
-        ) : (
+        
+        
           <div className="form-item">
             <input
               type="text"
@@ -48,7 +49,7 @@ const Home = () => {
               Acessar
             </button>
           </div>
-        )}
+        
       </div>
     </div>
   );
