@@ -1,0 +1,72 @@
+.container-form {
+  justify-content: center;
+  align-items: center;
+  background-color: #e66767;
+  margin: 0 auto;
+  margin-top: 180px;
+  max-width: 533px;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 0 1em lightblue;
+}
+.container-form h1 {
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  justify-content: center;
+  color: lightblue;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 0;
+}
+
+.container-form p {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script";
+  font-size: 25px;
+  color: aliceblue;
+  margin: 0;
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.form-item input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: 0;
+  font-size: 14px;
+}
+.form-item input:first-of-type {
+  margin-right: 10px;
+}
+
+.form-item input:focus {
+  border: 3px solid #555;
+  background-color: lightblue;
+}
+
+.form-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-button button {
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+.form-button button:focus {
+  border: 3px solid #555;
+  background-color: lightblue;
+}
