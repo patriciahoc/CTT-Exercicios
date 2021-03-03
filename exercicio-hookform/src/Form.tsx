@@ -54,6 +54,8 @@ export default function Form() {
           {errors.conjuge && <p> Campo obrigatório</p>}
         </div>
       )}
+      <label>Não</label>
+      <input name="" type="checkbox" value="Não" ref={register} />
 
       <input type="submit" />
     </form>
