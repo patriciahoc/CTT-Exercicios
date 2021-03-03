@@ -8,7 +8,6 @@ const INITIAL_STATE_HERO: HeroesState = {
 };
 
 const heroesReducer: Reducer = (state = INITIAL_STATE_HERO, action: any) => {
-  console.log(action.type);
   switch (action.type) {
     case HeroesAction.GET_HEROES_REQUEST:
       return {
