@@ -1,11 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Form() {
   const { register, errors, handleSubmit, watch } = useForm();
 
   const onSubmit = (data: any) => {
     console.log(data);
+    if (data) {
+      return toast("Formulário enviado!");
+    }
   };
 
   const casado = watch("casado");
@@ -55,9 +59,10 @@ export default function Form() {
         </div>
       )}
       <label>Não</label>
-      <input name="" type="checkbox" value="Não" ref={register} />
+      <input name="solteiro" type="checkbox" value="Não" ref={register} />
 
       <input type="submit" />
+      <Toaster />
     </form>
   );
 }
