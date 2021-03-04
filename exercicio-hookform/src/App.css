@@ -83,7 +83,7 @@ input[type="submit"]:active {
 input:disabled {
   opacity: 0.4;
 }
-input[type="checkbox"] {
+input[type="radio"] {
   width: 15px;
   height: 25px;
 }

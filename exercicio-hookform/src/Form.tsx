@@ -12,7 +12,7 @@ export default function Form() {
     }
   };
 
-  const casado = watch("casado");
+  const casado = watch("estadocivil");
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -44,10 +44,23 @@ export default function Form() {
       )}
 
       <label>Voce é casado(a) ?</label>
-      {errors.casado?.type === "required" && <p>Campo Obrigatório</p>}
+      {errors.estadocivil && <p>Campo Obrigatório</p>}
       <label>Sim</label>
-      <input name="casado" type="checkbox" value="Sim" ref={register} />
-      {casado && (
+      <input
+        name="estadocivil"
+        type="radio"
+        value="sim"
+        ref={register({ required: true })}
+      />
+      <label>Não</label>
+      <input
+        name="estadocivil"
+        type="radio"
+        value="nao"
+        ref={register({ required: true })}
+      />
+
+      {casado === "sim" && (
         <div>
           <label>Nome do conjuge</label>
           <input
@@ -58,8 +71,6 @@ export default function Form() {
           {errors.conjuge && <p> Campo obrigatório</p>}
         </div>
       )}
-      <label>Não</label>
-      <input name="solteiro" type="checkbox" value="Não" ref={register} />
 
       <input type="submit" />
       <Toaster />
